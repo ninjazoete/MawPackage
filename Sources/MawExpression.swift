@@ -6,7 +6,7 @@
 //  Copyright © 2015 Andrzej Spiess. All rights reserved.
 //
 
-internal protocol _MawExpression {
+private protocol _MawExpression {
     func valExprTokens(tokens : [MawToken]) -> Bool
     func valExprTokensOpType(tokens : [MawToken]) -> Bool
     func valExprTokensOpPos(tokens : [MawToken]) -> Bool
