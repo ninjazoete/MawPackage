@@ -11,7 +11,7 @@ protocol Number { }
 extension Int : Number { }
 extension Float : Number { }
 
-enum TokenType : String {
+public enum TokenType : String {
     case MINUS = "-"
     case PLUS = "+"
     case MULTIPLY = "*"
@@ -20,7 +20,7 @@ enum TokenType : String {
     case EOE
 }
 
-class MawToken {
+public class MawToken {
     
     let type : TokenType
     let value : Lexeme
