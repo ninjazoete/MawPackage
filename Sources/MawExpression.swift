@@ -6,19 +6,19 @@
 //  Copyright © 2015 Andrzej Spiess. All rights reserved.
 //
 
-private protocol _MawExpression {
+public protocol _MawExpression {
     func valExprTokens(tokens : [MawToken]) -> Bool
     func valExprTokensOpType(tokens : [MawToken]) -> Bool
     func valExprTokensOpPos(tokens : [MawToken]) -> Bool
 }
 
-protocol MawExpression {
+public protocol MawExpression {
     typealias ExprResultType
     
     func eval() -> ExprResultType
 }
 
-class MawExpressionBase<T> : _MawExpression, MawExpression {
+public class MawExpressionBase<T> : _MawExpression, MawExpression {
     
     private let _tokens : [MawToken]
     
@@ -52,13 +52,13 @@ class MawExpressionBase<T> : _MawExpression, MawExpression {
 }
 
 /* Expression that can evaluate algebraic operations with an output of Int type */
-class MawExpressionAlgebraicDecimal : MawExpressionBase<Int> {
+public class MawExpressionAlgebraicDecimal : MawExpressionBase<Int> {
     
-    override init?(tokens: [MawToken]) {
+    public override init?(tokens: [MawToken]) {
         super.init(tokens: tokens)
     }
     
-    override func eval() -> Int {
+    public override func eval() -> Int {
         
         /* Supported operations for certain token types */
         /* Explicitly passed so we can customize it and support more exotic additions, subtractions and so on */
