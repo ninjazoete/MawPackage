@@ -6,13 +6,13 @@
 //  Copyright © 2015 Andrzej Spiess. All rights reserved.
 //
 
-protocol Scanner {
+public protocol Scanner {
     typealias ScanResult
     
     func scan() -> ScanResult
 }
 
-class MawInterpreter : Scanner {
+public class MawInterpreter : Scanner {
     
     private let _input : String
     private let _gen : MawLexer
@@ -49,7 +49,7 @@ class MawInterpreter : Scanner {
     }
     
     // MARK: Scanner
-    func scan() -> Int {
+    public func scan() -> Int {
         return expr()
     }
 }
