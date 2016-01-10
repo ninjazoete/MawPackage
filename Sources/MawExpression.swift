@@ -54,11 +54,11 @@ internal class MawExpressionBase<T> : _MawExpression, MawExpression {
 /* Expression that can evaluate algebraic operations with an output of Int type */
 internal class MawExpressionAlgebraicDecimal : MawExpressionBase<Int> {
     
-    public override init?(tokens: [MawToken]) {
+    override init?(tokens: [MawToken]) {
         super.init(tokens: tokens)
     }
 
-    internal override func eval() -> Int {
+    override func eval() -> Int {
         
         /* Supported operations for certain token types */
         /* Explicitly passed so we can customize it and support more exotic additions, subtractions and so on */
