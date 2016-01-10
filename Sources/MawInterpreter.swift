@@ -17,7 +17,7 @@ public class MawInterpreter : Scanner {
     private let _input : String
     private let _gen : MawLexer
     
-    init(input : String) {
+    public init(input : String) {
         self._input = input
         self._gen = MawLexer(input: self._input)
     }
